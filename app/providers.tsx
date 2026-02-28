@@ -58,7 +58,21 @@ export function useTheme() {
 }
 
 export function ThemeToggle() {
-  const { theme, toggleTheme, mounted } = useTheme()
+  const context = useContext(ThemeContext)
+  
+  if (!context) {
+    return (
+      <button
+        className="p-2 rounded-lg bg-gray-100 dark:bg-slate-800 cursor-pointer"
+        aria-label="Toggle theme"
+        disabled
+      >
+        <Sun className="w-5 h-5 text-gray-600" />
+      </button>
+    )
+  }
+
+  const { theme, toggleTheme, mounted } = context
 
   if (!mounted) {
     return (
