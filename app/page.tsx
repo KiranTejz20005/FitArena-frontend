@@ -20,7 +20,7 @@ export default function LandingPage() {
       prizePool: '5,000 MON',
       prizeColor: 'from-purple-500 to-blue-500',
       participants: 42,
-      joinUrl: '/challenges/yoga-30day',
+      joinUrl: '/challenges/1',
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function LandingPage() {
       prizePool: '12,500 MON',
       prizeColor: 'from-pink-500 to-red-500',
       participants: 128,
-      joinUrl: '/challenges/steps-10k',
+      joinUrl: '/challenges/2',
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export default function LandingPage() {
       prizePool: '3,000 MON',
       prizeColor: 'from-green-500 to-teal-500',
       participants: 15,
-      joinUrl: '/challenges/plant-based',
+      joinUrl: '/challenges/3',
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ export default function LandingPage() {
       prizePool: '8,000 MON',
       prizeColor: 'from-orange-500 to-amber-500',
       participants: 200,
-      joinUrl: '/challenges/5am-meditation',
+      joinUrl: '/challenges/1',
     },
   ]
 
@@ -223,9 +223,6 @@ export default function LandingPage() {
 
                 <Button
                   className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-lg group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-all"
-                  onClick={(e) => {
-                    e.preventDefault()
-                  }}
                 >
                   Join Now
                 </Button>
