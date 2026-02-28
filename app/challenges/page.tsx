@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from './providers'
+import { ThemeToggle } from '../providers'
 import { ArrowLeft, Plus } from 'lucide-react'
 
 export default function ChallengesPage() {
@@ -104,7 +104,6 @@ export default function ChallengesPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950">
-      {/* Navigation */}
       <nav className="border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 sticky top-0 z-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
@@ -137,7 +136,6 @@ export default function ChallengesPage() {
         </div>
       </nav>
 
-      {/* Header */}
       <section className="py-12 px-6 border-b border-gray-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors mb-6">
@@ -160,7 +158,6 @@ export default function ChallengesPage() {
         </div>
       </section>
 
-      {/* Mobile Create Button */}
       <section className="md:hidden py-4 px-6 border-b border-gray-200 dark:border-slate-800">
         <Button
           onClick={() => setShowCreateModal(true)}
@@ -171,7 +168,6 @@ export default function ChallengesPage() {
         </Button>
       </section>
 
-      {/* Filters */}
       <section className="py-8 px-6 border-b border-gray-200 dark:border-slate-800 sticky top-16 z-40 bg-white/95 dark:bg-slate-950/95">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 flex-wrap">
@@ -192,7 +188,6 @@ export default function ChallengesPage() {
         </div>
       </section>
 
-      {/* Challenges Grid */}
       <section className="py-12 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredChallenges.map((challenge) => (
@@ -232,7 +227,6 @@ export default function ChallengesPage() {
         </div>
       </section>
 
-      {/* Create Challenge Modal */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-black/30 dark:bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg max-w-md w-full p-8 shadow-lg">
@@ -322,7 +316,6 @@ export default function ChallengesPage() {
         </div>
       )}
 
-      {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 px-6 mt-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
