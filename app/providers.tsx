@@ -8,6 +8,7 @@ type Theme = 'light' | 'dark'
 interface ThemeContextType {
   theme: Theme
   toggleTheme: () => void
+  mounted: boolean
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
@@ -42,7 +43,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
       {children}
     </ThemeContext.Provider>
   )
@@ -57,7 +58,19 @@ export function useTheme() {
 }
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme, mounted } = useTheme()
+
+  if (!mounted) {
+    return (
+      <button
+        className="p-2 rounded-lg bg-gray-100 dark:bg-slate-800 cursor-pointer"
+        aria-label="Toggle theme"
+        disabled
+      >
+        <Sun className="w-5 h-5 text-gray-600" />
+      </button>
+    )
+  }
 
   return (
     <button
@@ -66,9 +79,9 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === 'light' ? (
-        <Moon className="w-5 h-5 text-slate-700" />
+        <Moon className="w-5 h-5 text-gray-600" />
       ) : (
-        <Sun className="w-5 h-5 text-amber-400" />
+        <Sun className="w-5 h-5 text-amber-500" />
       )}
     </button>
   )

@@ -64,7 +64,7 @@ export default function HomePage() {
       <nav className="border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 sticky top-0 z-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-blue-700 dark:group-hover:bg-blue-600 transition-colors">
+            <div className="w-10 h-10 bg-emerald-600 dark:bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-emerald-700 dark:group-hover:bg-emerald-700 transition-colors">
               ⚡
             </div>
             <span className="text-xl font-bold text-slate-900 dark:text-white">FitArena</span>
@@ -85,7 +85,7 @@ export default function HomePage() {
 
             <div className="flex items-center gap-3">
               <ThemeToggle />
-              <Button className="bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors">
+              <Button variant="outline" className="border-gray-300 dark:border-slate-700 text-slate-900 dark:text-white hover:bg-gray-50 dark:hover:bg-slate-800 hidden sm:inline-flex">
                 Connect Wallet
               </Button>
             </div>
