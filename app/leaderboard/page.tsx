@@ -8,6 +8,7 @@ export default function LeaderboardPage() {
   const leaderboard = [
     {
       rank: 1,
+      username: 'Alex Chen',
       address: '0x3f...82a1',
       streak: 30,
       earned: 180,
@@ -16,6 +17,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 2,
+      username: 'Sarah Mitchell',
       address: '0x9a...b2c9',
       streak: 29,
       earned: 165,
@@ -24,7 +26,8 @@ export default function LeaderboardPage() {
     },
     {
       rank: 3,
-      address: 'You',
+      username: 'You',
+      address: '0x7f3a...9b2c',
       streak: 26,
       earned: 142,
       challenge: '26-Day Yoga Streak',
@@ -33,6 +36,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 4,
+      username: 'Jordan Williams',
       address: '0x21...d5f1',
       streak: 25,
       earned: 138,
@@ -41,6 +45,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 5,
+      username: 'Emma Rodriguez',
       address: '0x55...e8r9',
       streak: 22,
       earned: 125,
@@ -49,6 +54,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 6,
+      username: 'Marcus Johnson',
       address: '0x42...f4a2',
       streak: 21,
       earned: 118,
@@ -57,6 +63,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 7,
+      username: 'Sophie Brown',
       address: '0x88...c3d1',
       streak: 20,
       earned: 112,
@@ -65,6 +72,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 8,
+      username: 'David Kumar',
       address: '0xbc...a9e7',
       streak: 18,
       earned: 105,
@@ -73,6 +81,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 9,
+      username: 'Olivia Garcia',
       address: '0xd2...1f5c',
       streak: 16,
       earned: 95,
@@ -81,6 +90,7 @@ export default function LeaderboardPage() {
     },
     {
       rank: 10,
+      username: 'Liam O\'Connor',
       address: '0xe9...7b3a',
       streak: 15,
       earned: 88,
@@ -159,7 +169,8 @@ export default function LeaderboardPage() {
               {/* User Info */}
               <div className="flex-grow">
                 <div className="flex items-center gap-3 mb-1">
-                  <span className="text-lg font-bold text-white">{entry.address}</span>
+                  <span className="text-lg font-bold text-white">{entry.username}</span>
+                  <span className="text-slate-500 text-sm font-mono">{entry.address}</span>
                   {entry.isCurrentUser && (
                     <span className="px-2 py-1 bg-purple-600 text-white text-xs font-bold rounded">YOU</span>
                   )}

@@ -187,7 +187,6 @@ export default function ChallengesPage() {
 
                 <Button
                   className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-lg group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-all"
-                  onClick={(e) => e.preventDefault()}
                 >
                   View Challenge
                 </Button>
