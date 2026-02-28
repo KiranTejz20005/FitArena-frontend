@@ -187,7 +187,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredChallenges.map((challenge) => (
             <Link
               key={challenge.id}
@@ -199,8 +199,8 @@ export default function LandingPage() {
                   <div className="flex items-center gap-3">
                     <div className="text-3xl">{challenge.icon}</div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">{challenge.name}</h3>
-                      <p className="text-slate-400 text-sm">{challenge.description}</p>
+                      <h3 className="text-lg font-bold text-white">{challenge.name}</h3>
+                      <p className="text-slate-400 text-xs">{challenge.description}</p>
                     </div>
                   </div>
                   <span className="px-3 py-1 bg-slate-700 text-slate-300 text-xs font-semibold rounded-full whitespace-nowrap">
@@ -213,11 +213,11 @@ export default function LandingPage() {
                 <div className="mt-6 flex items-center justify-between pt-4 border-t border-slate-700">
                   <div>
                     <div className="text-slate-400 text-xs font-medium mb-1">Prize Pool</div>
-                    <div className="text-xl font-bold text-white">{challenge.prizePool}</div>
+                    <div className="text-lg font-bold text-white">{challenge.prizePool}</div>
                   </div>
                   <div className="text-right">
                     <div className="text-slate-400 text-xs font-medium mb-1">Participants</div>
-                    <div className="text-xl font-bold text-white">{challenge.participants}</div>
+                    <div className="text-lg font-bold text-white">{challenge.participants}</div>
                   </div>
                 </div>
 
